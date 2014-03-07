@@ -31,7 +31,9 @@
     {% if code is defined %}
         <h2>Code behind this page</h2>
         <div class="block">
+            {% autoescape 'html' %}
             <div class="symfony-content">{{ code|raw }}</div>
+            {% endautoescape %}
         </div>
     {% endif %}
 {% endblock %}
